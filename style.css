@@ -1,6 +1,6 @@
 /*font-family: 'Dancing Script', cursive;*/
 
-body#tela_login {
+#tela_login {
     margin: 0;
 
     font-family: 'Inter', sans-serif;
@@ -9,11 +9,12 @@ body#tela_login {
 }
 
 #login_cadastro {
+    margin: 80px auto;
+
+    width: 30%;
+    height: 80vh;
     min-width: 300px;
     min-height: 400px;
-    width: 30vw;
-    height: 80vh;
-    margin: 80px auto;
     overflow: hidden;
 
     background-color: #ffffff;
@@ -21,8 +22,113 @@ body#tela_login {
 
 #login_cadastro h4 {
     margin-top: 17px;
-    text-align: center;
+    margin-bottom: 0;
 
+    color: #3c4858;
     font-size: 20px;
     font-weight: 600;
+    text-align: center;
+}
+
+#login_cadastro form {
+    margin-top: 34px;
+    margin-bottom: 0;
+}
+
+#login_cadastro form label {
+    margin-left: 8.3%;
+    display: block;
+
+    color: #3c4858;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#login_cadastro form input {
+    margin: 9px auto 9px;
+    display: block;
+    
+    width: 83.3%;
+    height: 24px;
+
+    border: 1px solid #e0e6ed;
+    border-radius: 3px;
+    padding: 0;
+
+    background-color: #ffffff;
+    color: #3c4858;
+}
+
+#login_cadastro form button {
+    margin: 27px auto 0;
+    display: block;
+
+    width: 42.7%;
+    height: 24px;
+
+    border: 1px solid #60a8c4;
+    border-radius: 3px;
+    padding: 0;
+
+    background-color: #60a8c4;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+}
+
+#login_cadastro form button:hover {
+    cursor: pointer;
+}
+
+#login_cadastro p {
+    margin: 9px auto;
+
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#login_cadastro button {
+    margin: 0 auto 36px;
+    display: block;
+
+    width: 42.7%;
+    height: 24px;
+
+    border: 1px solid #60a8c4;
+    border-radius: 3px;
+    padding: 0;
+
+    background-color: #ffffff;
+    color: #60a8c4;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+}
+
+#login_cadastro button:hover {
+    cursor: pointer;
+    transition: 300ms;
+    
+    background-color: #60a8c4;
+    color: #fff;
+}
+
+#login_cadastro a {
+    margin: 0 auto 0;
+    display: block;
+
+    color: #60a8c4;
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+}
+
+#login_cadastro a:hover {
+    text-decoration: underline;
 }
