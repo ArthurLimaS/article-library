@@ -1,6 +1,6 @@
 /*font-family: 'Dancing Script', cursive;*/
 
-#tela_login {
+#tela_login_cadastro {
     margin: 0;
 
     font-family: 'Inter', sans-serif;
@@ -8,30 +8,39 @@
     background-color: #6DB5D1;
 }
 
-#login_cadastro {
-    margin: 64px auto;
-    
-    /*
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    */
-
+#login {
     width: 40vw;
     height: 53.3vw;
 
     min-width: 300px;
-    /*max-width: 546px;*/
     min-height: 400px;
-    /*max-height: 728px;*/
+}
 
-    overflow: hidden;
+#cadastro {
+    width: 40vw;
+    height: 73.3vw;
+
+    min-width: 300px;
+    min-height: 550px;
+}
+
+#esqueceu_senha {
+    width: 40vw;
+    height: 40vw;
+
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.login_cadastro {
+    margin: 64px auto;
+
+    overflow: hidden;   
 
     background-color: #ffffff;
 }
 
-#login_cadastro h4 {
+.login_cadastro h4 {
     margin-top: max(4.53vw, 34px);
     margin-bottom: 0;
 
@@ -41,12 +50,12 @@
     text-align: center;
 }
 
-#login_cadastro form {
+.login_cadastro form {
     margin-top: max(4.53vw, 34px);
     margin-bottom: 0;
 }
 
-#login_cadastro form label {
+.login_cadastro form label {
     margin-left: 8.3%;
     display: block;
 
@@ -55,7 +64,7 @@
     font-weight: 400;
 }
 
-#login_cadastro form input {
+.login_cadastro form input {
     margin: max(1.2vw, 9px) auto;
     display: block;
     
@@ -72,7 +81,7 @@
     color: #3c4858;
 }
 
-#login_cadastro form button {
+.login_cadastro form button {
     margin: max(3.6vw, 27px) auto 0;
     display: block;
 
@@ -91,11 +100,11 @@
     text-decoration: none;
 }
 
-#login_cadastro form button:hover {
+.login_cadastro form button:hover {
     cursor: pointer;
 }
 
-#login_cadastro p {
+.login_cadastro p {
     margin: max(1.2vw, 9px) auto;
 
     color: #000;
@@ -104,8 +113,8 @@
     text-align: center;
 }
 
-#login_cadastro button {
-    margin: 0 auto max(4.8vw, 36px);
+.login_cadastro button {
+    margin: 0 auto;
     display: block;
 
     width: 42.7%;
@@ -123,7 +132,8 @@
     text-decoration: none;
 }
 
-#login_cadastro button a {
+.login_cadastro button a {
+    margin: 0 auto;
     color: #60a8c4;
     font-size: max(1.3vw, 13px);
     font-weight: 300;
@@ -131,7 +141,7 @@
     text-decoration: none;
 }
 
-#login_cadastro button:hover {
+.login_cadastro button:hover {
     cursor: pointer;
     transition: 300ms;
     
@@ -139,15 +149,15 @@
     color: #fff;
 }
 
-#login_cadastro button:hover a {
+.login_cadastro button:hover a {
     transition: 300ms;
     
     color: #fff;
     text-decoration: none;
 }
 
-#login_cadastro a {
-    margin: 0 auto;
+.login_cadastro a {
+    margin: max(4.8vw, 36px) auto 0;
     display: block;
 
     color: #60a8c4;
@@ -157,6 +167,6 @@
     text-decoration: none;
 }
 
-#login_cadastro a:hover {
+.login_cadastro a:hover {
     text-decoration: underline;
 }
