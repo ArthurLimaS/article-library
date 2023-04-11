@@ -1,11 +1,26 @@
-/*font-family: 'Dancing Script', cursive;*/
-
 #tela_login_cadastro {
     margin: 0;
 
     font-family: 'Inter', sans-serif;
 
     background-color: #6DB5D1;
+}
+
+#tela_login_cadastro header{
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+#tela_login_cadastro header a {
+    margin: 0 auto;
+    
+    color: #87ceeb;
+    font-family: 'Dancing Script', cursive;
+    font-size: max(4vw, 40px);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
 }
 
 #login {
