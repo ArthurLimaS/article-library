@@ -185,3 +185,73 @@
 .login_cadastro a:hover {
     text-decoration: underline;
 }
+
+/*TELA DE USUÁRIO*/
+
+#tela_principal {
+    margin: 0;
+
+    font-family: 'Inter', sans-serif;
+}
+
+#tela_principal header {
+    padding: 0 16px;
+
+    background-color: #fafafa;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+#tela_principal header a {
+    color: #87ceeb;
+    font-family: 'Dancing Script', cursive;
+    font-size: max(4vw, 40px);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+#tela_principal header button {
+    background: none;
+    border: none;
+
+    color: #505050;
+    font-size: max(1.3vw, 13px);
+    font-weight: 400;
+}
+
+#tela_principal main {
+    display: flex;
+}
+
+#tela_principal main #sidebar {
+    width: 27.75%;
+    background-color: #fafafa;
+}
+
+#tela_principal main #sidebar button {
+    width: 27.75vw;
+
+    text-align: start;
+
+    color: #2e2e2e;
+    font-size: max(1.3vw, 13px);
+    font-weight: 400;
+}
+
+#tela_principal main #sidebar button img {
+    display: inline;
+
+    width: max(1.6vw, 16px);
+    height: max(1.6vw, 16px);
+}
+
+#tela_principal main #sidebar button p {
+    display: inline;
+}
+
+#tela_principal main #conteudo {
+    width: 72.25%;
+    background-color: #fff;
+}
