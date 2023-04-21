@@ -199,8 +199,8 @@
 }
 
 #tela_principal header {
-    padding: 0 max(2.13vw, 16px);
-    border-bottom: 1px solid #ebebeb;
+    padding: 0 max(1.07vw, 16px);
+    border-bottom: 2px solid #ebebeb;
 
     background-color: #fafafa;
     
@@ -209,11 +209,11 @@
 }
 
 #tela_principal header a {
-    margin: max(1.07vw, 8px) 0;
+    margin: max(0.8vw, 12px) 0;
 
     color: #87ceeb;
     font-family: 'Dancing Script', cursive;
-    font-size: max(4.27vw, 32px);
+    font-size: max(2.67vw, 40px);
     font-weight: 600;
     text-align: center;
     text-decoration: none;
@@ -225,7 +225,7 @@
     border: none;
 
     color: #505050;
-    font-size: max(1.73vw, 13px);
+    font-size: max(0.87vw, 13px);
     font-weight: 400;
 }
 
@@ -234,12 +234,12 @@
 }
 
 #tela_principal main #sidebar {
-    border-right: 1px solid #ebebeb;
-    padding-top: max(1.07vw, 8px);
+    border-right: 2px solid #ebebeb;
+    padding-top: max(0.53vw, 8px);
 
-    width: 25.75%;
+    width: 13vw;
     min-width: 197px;
-    min-height: 93vh;
+    min-height: 88.5vh;
 
     background-color: #fafafa;
 }
@@ -252,7 +252,7 @@
     display: flex;
     text-align: start;
 
-    width: 25.75vw;
+    width: 13vw;
     min-width: 197px;
 }
 
@@ -262,22 +262,22 @@
 }
 
 #tela_principal main #sidebar button img {
-    margin: max(1.07vw, 8px) 0 max(1.07vw, 8px) max(2.13vw, 16px);
+    margin: max(0.53vw, 8px) 0 max(0.53vw, 8px) max(1.07vw, 16px);
 
     display: inline;
 
-    width: max(2.13vw, 16px);
-    height: max(2.13vw, 16px);
+    width: max(1.07vw, 16px);
+    height: max(1.07vw, 16px);
 }
 
 #tela_principal main #sidebar button p {
-    margin: 0 max(2.13vw, 16px) 0 max(1.2vw, 9px);
+    margin: 0 max(1.07vw, 16px) 0 max(0.6vw, 9px);
 
     display: inline;
-    line-height: max(4.27vw, 32px);
+    line-height: max(2.13vw, 32px);
 
     color: #2e2e2e;
-    font-size: max(1.47vw, 11px);
+    font-size: max(0.73vw, 11px);
     font-weight: 400;
 }
 
@@ -286,10 +286,10 @@
 }
 
 #tela_principal main #sidebar p {
-    margin: max(4.27vw, 32px) 0 max(1.73vw, 13px)  max(2.13vw, 16px);
+    margin: max(2.13vw, 32px) 0 max(0.87vw, 13px)  max(1.07vw, 16px);
 
     color: #505050;
-    font-size: max(1.73vw, 13px);
+    font-size: max(0.87vw, 13px);
     font-weight: 700;
 }
 
@@ -299,11 +299,11 @@
 }
 
 #tela_principal main #sidebar ul li button p {
-    margin: 0 max(2.13vw, 16px);
+    margin: 0 max(1.07vw, 16px);
 }
 
 #tela_principal main #conteudo {
-    width: 74.25%;
+    width: 87%;
     background-color: #fff;
 }
 
@@ -315,16 +315,16 @@
 }
 
 #tela_principal main #conteudo #subheader p {
-    margin: 0 0 0 max(1.6vw, 12px);
+    margin: 0 0 0 max(0.8vw, 12px);
 
     color: #102443;
-    font-size: max(2.67vw, 20px);
+    font-size: max(1.33vw, 20px);
     font-weight: 400;
-    line-height: max(6.4vw, 48px);
+    line-height: max(3.2vw, 48px);
 }
 
 #tela_principal main #conteudo #subheader button {
-    margin-right: max(1.6vw, 12px);
+    margin-right: max(0.8vw, 12px);
     padding: 0;
     border: none;
     background: none;
@@ -338,11 +338,11 @@
 }
 
 #tela_principal main #conteudo #subheader button img {
-    margin: max(1.2vw, 12px) max(0.9vw, 9px) max(1.2vw, 12px) 0;
+    margin: max(0.8vw, 12px) max(0.6vw, 9px) max(0.8vw, 12px) 0;
 
     display: inline;
-    width: max(2.4vw, 24px);
-    height: max(2.4vw, 24px);
+    width: max(1.6vw, 24px);
+    height: max(1.6vw, 24px);
 }
 
 #tela_principal main #conteudo #subheader button p {
@@ -350,7 +350,7 @@
     display: inline;
 
     color: #737373;
-    font-size: max(2vw, 20px);
+    font-size: max(1.33vw, 20px);
     font-weight: 400;
 }
 
