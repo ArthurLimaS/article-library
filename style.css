@@ -200,6 +200,7 @@
 
 #tela_principal header {
     padding: 0 max(1.07vw, 16px);
+    min-width: 768px;
     border-bottom: 2px solid #ebebeb;
 
     background-color: #fafafa;
@@ -304,6 +305,7 @@
 
 #tela_principal main #conteudo {
     width: 87%;
+    min-width: 601px;
     background-color: #fff;
 }
 
@@ -358,37 +360,82 @@
     color: #25549d;
 }
 
-#tela_principal main #conteudo #table .row{
+/* TABELA FEITA COM TABLE */
+
+#tela_principal main #conteudo table {
+    border-collapse: collapse;
+}
+
+#tela_principal main #conteudo table th,
+#tela_principal main #conteudo table td {
     border-bottom: 1px solid #ebebeb;
-
-    display: flex;
+    padding: max(0.33vw, 5px) 0;
 }
 
-#tela_principal main #conteudo #table .row .checkbox {
-    border: 1px solid #505050;
-    margin: max(0.5vw, 5px) max(0.9vw, 9px) max(0.5vw, 5px) max(0.5vw, 5px);
-
-    width: max(1.3vw, 13px);
-    height: max(1.3vw, 13px);
+#tela_principal main #conteudo table th:hover {
+    cursor: pointer;
+    background-color: #ebebeb;
 }
 
-#tela_principal main #conteudo #table .row img {
-    padding: 0;
-    margin: max(0.6vw, 6px) max(0.9vw, 9px) max(0.6vw, 6px) 0;
-
-    width: max(1.3vw, 13px);
-    height: max(1.3vw, 13px);
+#tela_principal main #conteudo table {
+    width: 100%;
 }
 
-#tela_principal main #conteudo #table .row p {
-    margin: 0 max(0.5vw, 5px) 0 0;
+#tela_principal main #conteudo table th {
+    text-align: start;
 
     color: #505050;
-    font-size: max(1.1vw, 11px);
+    font-size: max(0.73vw, 11px);
     font-weight: 700;
-    line-height: max(2.5vw, 25px);
+    line-height: max(1.67vw, 25px);
+    text-align: center;
 }
 
-#tela_principal main #conteudo #table .row p.doc_title {
-    width: max(37.5vw, 375px);
+#tela_principal main #conteudo table td {
+    color: #2e2e2e;
+    font-size: max(0.73vw, 11px);
+    font-weight: 400;
+    line-height: max(1.67vw, 25px);
+    text-align: center;
+}
+
+#tela_principal main #conteudo table tr .checkbox {
+    border: 1px solid #505050;
+    border-radius: 3px;
+    margin: auto;
+
+    width: max(0.87vw, 13px);
+    height: max(0.87vw, 13px);
+}
+
+#tela_principal main #conteudo table tr img {
+    display: block;
+    padding: 0;
+    margin: auto;
+
+    width: max(0.87vw, 13px);
+    height: max(0.87vw, 13px);
+}
+
+#tela_principal main #conteudo table .table_checkbox,
+#tela_principal main #conteudo table .table_estrela {
+    width: 2.5%;
+    min-width: 30px;
+}
+
+#tela_principal main #conteudo table .table_modificacao {
+    width: 10%;
+    min-width: 120px;
+}
+
+#tela_principal main #conteudo table .table_download {
+    width: 6%;
+    min-width: 72px;
+}
+
+#tela_principal main #conteudo table p {
+    margin: 0;
+    margin-left: max(0.6vw, 9px);
+
+    text-align: start;
 }
