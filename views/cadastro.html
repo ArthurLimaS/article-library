@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+        <title>Tela de cadastro</title>
+    </head>
+    <body id="tela_login_cadastro">
+        <header>
+            <a href="/">Article Library</a>
+        </header>
+
+        <div id="cadastro" class="login_cadastro">
+            <h4>Criar uma conta</h4>
+            <form action="/principal">
+                <div class="input-wrapper">
+                    <label for="primeiro_nome">Primeiro nome</label>
+                    <input type="text" name="primeiro_nome">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="ultimo_nome">Último nome</label>
+                    <input type="text" name="ultimo_nome">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="email">Endereço de email</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="confirmacao_senha">Confirmação da Senha</label>
+                    <input type="password" name="confirmacao_senha">
+                </div>
+
+                <button>Criar uma Conta</button>
+            </form>
+            <p>ou</p>
+            <button><a href="/">Iniciar Sessão</a></button>
+        </div>
+    </body>
+</html>
