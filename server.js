@@ -1,8 +1,13 @@
 const express = require("express")
 const server = express()
 
+const db = require("./db")
+
 // configurar arquivos estáticos (css, scripts, imagens)
 server.use(express.static("public"))
+
+// habilitar uso do req.body
+server.use(express.urlencoded({extended: true}))
 
 // configuração do nunjucks
 const nunjucks = require("nunjucks")
