@@ -245,6 +245,30 @@
     background-color: #fafafa;
 }
 
+#tela_principal main #sidebar #file_loader {
+    display: none;
+}
+
+#tela_principal main #sidebar #file_loader_button {
+    margin-bottom: max(0.53vw, 8px);
+    margin-left: max(1.07vw, 16px);
+    border: 1px solid #b9b9b9;
+    background-color: #fff;
+
+    width: 6.5vw;
+    min-width: 98.5px;
+    transition: all 0.3s ease-in 0s;
+}
+
+#tela_principal main #sidebar #file_loader_button p {
+    margin: auto;
+    display: inline;
+
+    color: #25549d;
+    font-size: max(0.73vw, 11px);
+    font-weight: 400;
+}
+
 #tela_principal main #sidebar button {
     padding: 0;
     border: none;
@@ -359,8 +383,6 @@
 #tela_principal main #conteudo #subheader button:hover p {
     color: #25549d;
 }
-
-/* TABELA FEITA COM TABLE */
 
 #tela_principal main #conteudo table {
     border-collapse: collapse;
