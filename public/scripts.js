@@ -3,13 +3,29 @@ function loadFile() {
   document.getElementById('file_loader').click();
 }
 
-document.getElementById('file_loader').addEventListener("input", showFile)
+document.getElementById('file_loader').addEventListener("input", submitFile)
+const form = document.getElementById("file_loader_form")
 
-function showFile() {
-  const file = document.getElementById("file_loader").files[0];
-  alert(`File name: ${file.name}`); // e.g my.png
-  const form = document.getElementById("file_loader_form")
-  form.submit()
+/** @param {Event} event */
+function submitFile(event) {
+  //handleSubmit(event)
+  form.submit() 
+}
+
+/** @param {Event} event */
+function handleSubmit(event) {
+  const url = new URL(form.action);
+  
+  const formData = new FormData(form)
+  console.log(formData)
+
+  /** @type {Parameters<fetch>[1]} */
+  const fetchOptions = {
+    method: form.method,
+    body: formData,
+  };
+
+  fetch(url, fetchOptions);
 }
 
 // var drop = document.getElementById("conteudo");

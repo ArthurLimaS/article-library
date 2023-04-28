@@ -4,13 +4,54 @@ const db = new sqlite3.Database('./dados.db')
 db.serialize(function(){
     db.run(`
         CREATE TABLE IF NOT EXISTS arquivos(
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            titulo TEXT NOT NULL,
-            arquivo VARBINARY,
-            ultima_modificacao DATE
+            id_arquivo INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome_arquivo VARCHAR(180) NOT NULL,
+            dados LONGBLOB NOT NULL,
+            ultima_modificacao DATETIME
         );
     `)
 
+    db.run(`
+        CREATE TABLE IF NOT EXISTS usuarios(
+            id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
+            primeiro_nome_usuario VARCHAR(20) NOT NULL,
+            ultimo_nome_usuario VARCHAR(20) NOT NULL,
+            email_usuario VARCHAR(60) NOT NULL,
+            senha_usuario VARCHAR(30) NOT NULL
+        );
+    `)
+
+    db.run(`
+        CREATE TABLE IF NOT EXISTS grupos(
+            id_grupo INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome_grupo VARCHAR(90) NOT NULL,
+            id_adm INTEGER
+        );
+    `)
+
+    db.run(`
+        CREATE TABLE IF NOT EXISTS usuarios_arquivos(
+            id_usuario INTEGER,
+            id_arquivo INTEGER,
+            PRIMARY KEY(id_usuario, id_arquivo)
+        );
+    `)
+
+    db.run(`
+        CREATE TABLE IF NOT EXISTS usuarios_grupos(
+            id_usuario INTEGER,
+            id_grupo INTEGER,
+            PRIMARY KEY(id_usuario, id_grupo)
+        );
+    `)
+
+    db.run(`
+        CREATE TABLE IF NOT EXISTS grupos_arquivos(
+            id_grupo INTEGER,
+            id_arquivo INTEGER,
+            PRIMARY KEY(id_grupo, id_arquivo)
+        );
+    `)
     // // Get current date
     // const date = new Date();
     // let currentDay= String(date.getDate()).padStart(2, '0');
@@ -41,7 +82,36 @@ db.serialize(function(){
         if (err) return console.log(err)
 
         console.log(rows)
-        console.log("Dataset criado e populado")
+    })
+
+    db.all(`SELECT * FROM usuarios`, function(err, rows){
+        if (err) return console.log(err)
+
+        console.log(rows)
+    })
+
+    db.all(`SELECT * FROM grupos`, function(err, rows){
+        if (err) return console.log(err)
+
+        console.log(rows)
+    })
+
+    db.all(`SELECT * FROM usuarios_arquivos`, function(err, rows){
+        if (err) return console.log(err)
+
+        console.log(rows)
+    })
+
+    db.all(`SELECT * FROM usuarios_grupos`, function(err, rows){
+        if (err) return console.log(err)
+
+        console.log(rows)
+    })
+
+    db.all(`SELECT * FROM grupos_arquivos`, function(err, rows){
+        if (err) return console.log(err)
+
+        console.log(rows)
     })
 })
 

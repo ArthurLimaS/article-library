@@ -15,11 +15,12 @@
 
         <main>
             <div id="sidebar">
-                <form action="#" method="POST" onsubmit="event.preventDefault()" id="file_loader_form">
-                    <input type="file" id="file_loader"/>
-                    <button id="file_loader_button" onclick="loadFile()"><p>+ Novo Arquivo</p></button>
+                <form id="file_loader_form" action="/principal" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="file_loader" name="file"/>
                 </form>
-
+                
+                <button id="file_loader_button" onclick="loadFile()"><p>+ Novo Arquivo</p></button>
+                
                 <button>
                     <img src="https://cdn-icons-png.flaticon.com/512/3655/3655544.png" alt="Imagem de livros">
                     <p>Todas as referências</p>
