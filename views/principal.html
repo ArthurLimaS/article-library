@@ -9,11 +9,17 @@
     <body id="tela_principal">
         <header>
             <a href="/">Article Library</a>
-            <button>Arthur Lima</button>
+            <button>Perfil</button>
         </header>
 
         <main>
             <div id="sidebar">
+                <form id="file_loader_form" action="/principal" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="file_loader" name="file"/>
+                </form>
+                
+                <button id="file_loader_button" onclick="loadFile()"><p>+ Novo Arquivo</p></button>
+                
                 <button>
                     <img src="https://cdn-icons-png.flaticon.com/512/3655/3655544.png" alt="Imagem de livros">
                     <p>Todas as referências</p>
@@ -76,13 +82,14 @@
                     <tr>
                       <td class="table_checkbox"><div class="checkbox"></div></td>
                       <td class="table_estrela"><img src="https://cdn-icons-png.flaticon.com/512/2377/2377878.png" alt="Imagem de estrela"></td>
-                      <td class="table_titulo"><p>{{entrada.titulo}}</p></td>
+                      <td class="table_titulo"><p>{{entrada.nome_arquivo}}</p></td>
                       <td class="table_modificacao">{{entrada.ultima_modificacao}}</td>
-                      <td class="table_download"><img src="https://cdn-icons-png.flaticon.com/512/4321/4321162.png" alt="Imagem de downlaod"></td>
+                      <td class="table_download"><img src="https://cdn-icons-png.flaticon.com/512/4321/4321162.png" alt="Imagem de download"></td>
                     </tr>
                     {% endfor %}
                 </table>
             </div>
         </main>
+        <script src="/scripts.js"></script>
     </body>
 </html>
