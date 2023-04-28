@@ -77,42 +77,6 @@ db.serialize(function(){
         
     //     console.log(this)
     // })
-
-    db.all(`SELECT * FROM arquivos`, function(err, rows){
-        if (err) return console.log(err)
-
-        console.log(rows)
-    })
-
-    db.all(`SELECT * FROM usuarios`, function(err, rows){
-        if (err) return console.log(err)
-
-        console.log(rows)
-    })
-
-    db.all(`SELECT * FROM grupos`, function(err, rows){
-        if (err) return console.log(err)
-
-        console.log(rows)
-    })
-
-    db.all(`SELECT * FROM usuarios_arquivos`, function(err, rows){
-        if (err) return console.log(err)
-
-        console.log(rows)
-    })
-
-    db.all(`SELECT * FROM usuarios_grupos`, function(err, rows){
-        if (err) return console.log(err)
-
-        console.log(rows)
-    })
-
-    db.all(`SELECT * FROM grupos_arquivos`, function(err, rows){
-        if (err) return console.log(err)
-
-        console.log(rows)
-    })
 })
 
 module.exports = db

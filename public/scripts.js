@@ -4,29 +4,58 @@ function loadFile() {
 }
 
 document.getElementById('file_loader').addEventListener("input", submitFile)
-const form = document.getElementById("file_loader_form")
 
 /** @param {Event} event */
 function submitFile(event) {
-  //handleSubmit(event)
-  form.submit() 
-}
-
-/** @param {Event} event */
-function handleSubmit(event) {
-  const url = new URL(form.action);
+  const file = event.target.files[0];
+  const fileName = event.target.files[0].name;
   
-  const formData = new FormData(form)
-  console.log(formData)
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
 
-  /** @type {Parameters<fetch>[1]} */
-  const fetchOptions = {
-    method: form.method,
-    body: formData,
+  reader.onload = function () {
+    fetch("/store", {
+      method: "POST",
+      body: JSON.stringify({
+        dados: reader.result,
+        fileName: fileName
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(async function (res) {
+      const result = await res.json();
+      if (result.inserido) {
+        document.location.reload()
+      }
+    }).catch(function (err) {
+      console.log(err);
+    });
   };
-
-  fetch(url, fetchOptions);
+  
+  reader.onerror = function () {
+    console.log(reader.error);
+  };
 }
+
+function downloadFile(url, fileName) {
+  fetch(url, {
+    method: 'get',
+    mode: 'no-cors',
+    referrerPolicy: 'no-referrer'
+  }).then(
+    res => res.blob()
+  ).then(res => {
+    const aElement = document.createElement('a');
+    aElement.setAttribute('download', fileName);
+    const href = URL.createObjectURL(res);
+    aElement.href = href;
+    aElement.setAttribute('target', '_blank');
+    aElement.click();
+    URL.revokeObjectURL(href);
+    aElement.remove()
+  });
+};
 
 // var drop = document.getElementById("conteudo");
 // drop.addEventListener("dragover", change, false);
